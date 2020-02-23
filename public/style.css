@@ -1,3 +1,55 @@
+body {
+  font-family: "Catamaran", sans-serif;
+
+}
+
+.jumbotron {
+  background-size: cover;
+  background-color: #0071dc;
+  height: 250px;
+  text-align: center;
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+h1 {
+  font-size: 40px;
+  color: #000000;
+  text-decoration: underline;
+  text-align: center;
+}
+
+button {
+  margin: 0px 10px 10px 0px;
+}
+
+.card-body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.card-body img {
+  margin-right: 20px;
+}
+.text {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.active {
+  color: #ee6e73;
+  font-weight: 300;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+
 .active {
   color: #ee6e73;
   font-weight: 300;

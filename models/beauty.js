@@ -7,19 +7,17 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var BeautySchema = new Schema({
   // `title` must be of type String
-  link: {
-      type: String,
-      unique: true
-  },
+  link: String,
+
   title: String,
 
   date: Date,
-  
+
   author: String
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Beauty = mongoose.model("Beauty", BeautySchema);
+var BeautyArticle = mongoose.model("BeautyArticle", BeautySchema);
 
 // Export the Note model
-module.exports = Beauty;
+module.exports = BeautyArticle;

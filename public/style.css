@@ -1,0 +1,78 @@
+body {
+  overflow: scroll;
+}
+.beauty {
+  background-image: url(img/beauty.jpg);
+  background-size: cover;
+  height: 250px;
+  text-align: center;
+  color: white;
+}
+.jumbotron {
+  background: transparent;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: auto;
+}
+.scrape {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sen", sans-serif;
+}
+h1 {
+  font-size: 60px;
+  color: purple;
+  text-align: center;
+  margin: auto;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+button {
+  margin: 0px 10px 10px 0px;
+}
+
+.btn-info {
+  background-color: purple;
+  border-radius: 15px;
+  border: none;
+  font-family: "Sen", sans-serif;
+  margin-top:
+
+}
+.card {
+  margin: 5px 0px;
+}
+.card-body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.card-body img {
+  margin-right: 20px;
+}
+.text {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+

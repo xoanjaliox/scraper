@@ -53,7 +53,7 @@ app.get("/scrape", function(req, res) {
         .attr("href");
 
       //if all were found
-      if (result.link && result.title && result.description) {
+      if (result.title && result.link) {
         // console.log("result", result);
         db.Article.create(result)
           .then(function(inserted) {

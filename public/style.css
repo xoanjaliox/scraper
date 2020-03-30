@@ -1,9 +1,8 @@
 body {
-  overflow: scroll;
+  background-color: #e3e3e3;
 }
-.beauty {
-  background-image: url(img/beauty.jpg);
-  background-size: cover;
+.article{
+  background-color: #e3e3e3;
   height: 250px;
   text-align: center;
   color: white;
@@ -11,7 +10,7 @@ body {
 .jumbotron {
   background: transparent;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: -20px;
 }
 
 .container {
@@ -34,8 +33,8 @@ h6 {
   font-family: "Sen", sans-serif;
 }
 h1 {
-  font-size: 60px;
-  color: purple;
+  font-size: 80px;
+  color: #663a82;
   text-align: center;
   margin: auto;
 }
@@ -43,15 +42,17 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 button {
-  margin: 0px 10px 10px 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+
 }
 
 .btn-info {
-  background-color: purple;
-  border-radius: 15px;
-  border: none;
+  background-color: #663a82;
+  color: #ffffff;
   font-family: "Sen", sans-serif;
-  margin-top:
+  border: none;
+  margin-top: 0px;
 
 }
 .card {
@@ -74,5 +75,3 @@ button {
   grid-gap: 10px;
   padding: 10px;
 }
-
-

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Beauty Scraper</title>
+    <title>Article Scraper</title>
     <meta name="description" content="article scrapper" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -17,10 +17,12 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link 
+    href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap"
+    rel="stylesheet">
     <link
-    href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    rel="stylesheet"
+    href="style.css" />
     <script src="https://code.jquery.com/jquery.js"></script>
   </head>
   <body>
@@ -32,21 +34,20 @@
     <![endif]-->
     <!-- page header full-width -->
     <div class="jumbotron jumbotron-fluid">
-      <h1>- Beauty Scraper -</h1>
+      <h1>Article Scraper</h1>
     </div>
 
     <!-- page content -->
     <div class="container">
       <!-- buttons -->
-      <button type="button" class="btn btn-info" id="scrape">
+      <button type="button" class="btn btn-info" id="scrape-articles">
         Scrape Articles
       </button>
-      <!-- <button type="button" class="btn btn-info" id="saved-articles">
+      <button type="button" class="btn btn-info" id="saved-articles">
         Saved Articles
-      </button> -->
+      </button>
 
       <div class="scrape">
-        <!-- each article gets put inside a card: article-block.handlebars-->
         <div id="article-parent"></div>
       </div>
       <!-- end container -->

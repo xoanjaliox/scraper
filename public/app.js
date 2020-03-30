@@ -1,10 +1,10 @@
 // We'll be rewriting the table's data frequently, so let's make our code more DRY
 // by writing a function that takes in 'beauty' (JSON) and creates a table body
-function displayResults(beauty) {
+function displayResults(article) {
   // console.log("display running");
 
   $("#article-parent").empty();
-  beauty.forEach(function(tip) {
+  article.forEach(function(tip) {
     var card = $("<div>").addClass("card");
     var cardBody = $("<div>").addClass("card-body");
     var cardText = $("<div>").addClass("text");
@@ -34,10 +34,10 @@ $.getJSON("/saved", function(data) {
 // 2: Button Interactions
 // ======================
 // When user clicks the scrape new articles button, update table with new articles if any
-$("#scrape").on("click", function() {
-  console.log("Scraped new articles.");
-  $.get("/scrape").then(
-    $.getJSON("/getbeauty", function(data) {
+$("#scrape-articles").on("click", function() {
+  console.log("just scraped new articles, deleting any not previously saved.");
+  $.get("/scrape-articles").then(
+    $.getJSON("/getarticles", function(data) {
       displayResults(data);
     })
   );

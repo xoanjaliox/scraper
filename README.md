@@ -1,2 +1,0 @@
-# scraper
-hw 18

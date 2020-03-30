@@ -31,31 +31,31 @@ app.get("/", function(req, res) {
 });
 
 //Scrape data from a site & save in mongo db
-app.get("/scrapebeauty", function(req, res) {
+app.get("/scrape", function(req, res) {
   //remove any articles that were not saved in the previous scrape
-  db.BeautyArticle.find({ saved: false }).remove();
+  db.Article.find({ saved: false }).remove();
 
   //scrape articles
-  axios.get("https://www.dermstore.com/blog/").then(async function(response) {
+  axios.get("https://sokoglam.com/blogs/news").then(async function(response) {
     var $ = cheerio.load(response.data);
 
     //article class
-    await $(".post").each(function(i, element) {
+    await $(".article-content").each(function(i, element) {
       //save an empty result object
       var result = {};
       //add link, title, date, & author of current element to result obj
-      result.link = $(this).attr("href");
       result.title = $(this)
-        .children("h")
-        .text();
-      result.authorDate= $(this)
-        .children("p")
-        .text();
+      .children("h2")
+      .text();
+      result.link = $(this)
+        .children("h2")
+        .children("a")
+        .attr("href");
 
       //if all were found
-      if (result.link && result.title && result.authorDate) {
+      if (result.link && result.title && result.description) {
         // console.log("result", result);
-        db.BeautyArticle.create(result)
+        db.Article.create(result)
           .then(function(inserted) {
             // console.log("new articles found and added to db", inserted);
           })
@@ -67,8 +67,8 @@ app.get("/scrapebeauty", function(req, res) {
   });
 });
 
-app.get("/getbeauty", function(req, res) {
-  db.BeautyArticle.find({}).exec(function(err, found) {
+app.get("/getarticle", function(req, res) {
+  db.Article.find({}).exec(function(err, found) {
     if (err) {
       console.log(err);
     } else {
@@ -78,7 +78,7 @@ app.get("/getbeauty", function(req, res) {
 });
 
 app.get("/saved", function(req, res) {
-  db.BeautyArticle.find({ saved: true }).exec(function(err, found) {
+  db.Article.find({ saved: true }).exec(function(err, found) {
     if (err) {
       console.log("err", err);
     } else {

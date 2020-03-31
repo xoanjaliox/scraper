@@ -36,8 +36,8 @@ $.getJSON("/saved", function(data) {
 // When user clicks the scrape new articles button, update table with new articles if any
 $("#scrape-articles").on("click", function() {
   console.log("Scraped new articles.");
-  $.get("/scrape-articles").then(
-    $.getJSON("/getarticles", function(data) {
+  $.get("/scrape").then(
+    $.getJSON("/getarticle", function(data) {
       displayResults(data);
     })
   );

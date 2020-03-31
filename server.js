@@ -52,6 +52,8 @@ app.get("/scrape", function(req, res) {
         .children("a")
         .attr("href");
 
+        console.log(result);
+
       //if all were found
       if (result.title && result.link) {
         // console.log("result", result);

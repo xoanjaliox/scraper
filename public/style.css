@@ -14,10 +14,8 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  margin: auto;
+  text-align: center;
+
 }
 .scrape {
   display: flex;
@@ -59,9 +57,17 @@ button {
   margin: 5px 0px;
   
 }
+
+.card-title {
+  margin-bottom: 0px;
+  color: #663a82;
+}
+
+a:hover {
+  text-decoration: none;
+}
 .card-body {
-  display: flex;
-  flex-flow: row nowrap;
+
 }
 .card-body img {
   margin-right: 20px;

@@ -11,7 +11,8 @@ function displayResults(article) {
     var title = $("<h4>")
       .addClass("card-title")
       .text(tip.title);
-    var aTag = $("<a>").attr("href", tip.link);
+    var aTag = $("<a>").attr("href", "https://sokoglam.com" + tip.link);
+    console.log("tip", tip);
     var pTag = $("<p>")
       .addClass("card-text")
       .text(tip.description);
